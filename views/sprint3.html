@@ -22,17 +22,28 @@
   <h4><u> Functionality </u></h4>
   <p>
       Our site currently supports the following functions:
+      <ul>
+          <li> You can create an event </li>
+          <li> Event creation has "memory" if field is valid </li>
+          <li> People can RSVP (only from Yale) </li>
+          <li> You can vie out list of events </li>
+      </ul>
+  </p>
+  <h4><u> Test Complaiance </u></h4>
+  <p>
+      Our site currently supports the following functions:
       <ul class = 'done'>
           {% for func in report.functionality %}
               <li> {{functionality[func]}} </li>
           {% endfor %}
       </ul>
+      We're still working on these issues:
       {% if report.todo != 0 %}
-            <ul class = 'todo'>
-              {% for todo in report.todo %}
-                  <li> {{functionality[todo]}} </li>
-              {% endfor %}
-      </ul>
+        <ul class = 'todo'>
+          {% for todo in report.todo %}
+              <li> {{functionality[todo]}} </li>
+          {% endfor %}
+        </ul>
       {% endif %}
   </p>
   <!-- Scrum meeting held -->
@@ -43,4 +54,9 @@
       In the sprint planing meeting we assigend stories to the diffrent team members.
   </p>
   <!-- Points system      -->
+  <h4><u> Our points system </u></h4>
+  <pr>
+      Our points sytem was based on the Fibonacci Sequence. Each developer had assigend points to their own story<br>
+      because of our different development skills.
+  </p>  
 {% endblock %}

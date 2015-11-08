@@ -62,7 +62,7 @@ function reportDetail (request, response) {
     var contextData = {
         title: 'Small-Sea Sprint reports site',
         report: rep,
-        functionality: functionality
+        functionality: functionality,
     };
     response.render('sprint'+ rep.id +'.html', contextData);
   }
@@ -71,7 +71,6 @@ function reportDetail (request, response) {
       response.redirect(rep.link);
   }
 }
-
 module.exports = {
   reportDetail: reportDetail
 };
