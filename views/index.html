@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+  <h2>
+    Welcome to {{ title }} page
+  </h2>
+  
+  <h3><u> What is this project about? </u></h3>
+  <p>
+      Our goal is to provide an application that allows users to create and RSVP for upcoming
+      events - essentially a minimal (and better) clone of <a target='_blank' href = 'https://www.eventbrite.com/'>Eventbrite</a>.
+  </p>
+  
+  <h3><u> Important links </u></h3>
+  <ul>
+      <li> <a  target='_blank' href = 'https://mgt-656-small-sea.herokuapp.com/'>Our product site</a> </li>
+      <li> <a  target='_blank' href = 'https://waffle.io/small-sea/mgt656-spring-2015-project'>Our Kanban board</a> </li>
+      <li> <a  target='_blank' href = 'https://mgt656.som.yale.edu/project'>Our requirements page</a> </li>
+  </ul>
+  
+  <h3><u> Our reports: </u></h3>
+  <ul>
+      {% for report in reports %}
+      <li>
+          {% if report.link != 'reports/' %}
+              <a target="_blank" href = {{report.link}} >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
+          {% else %}
+              <a target="_blank" href = "/{{report.link}}{{report.id}}" >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
+          {% endif %}
+      </li>
+      {% endfor %}
+  </ul>
+{% endblock %}

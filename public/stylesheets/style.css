@@ -1,0 +1,9 @@
+.done {
+    list-style-image: url('http://findicons.com/files/icons/1581/silk/16/tick.png');
+    color: green;
+}
+
+.todo {
+    list-style-image: url('http://findicons.com/files/icons/1156/fugue/16/exclamation_red_frame.png');
+    color: red;
+}
