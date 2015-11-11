@@ -2,7 +2,15 @@
 
 var reports = require('../models/reports');
 
-var functionality =
+var functionality = 
+{
+    1: 'You can create an event',
+    2: 'Event creation has "memory" if field is valid',
+    3: 'People can RSVP (only from Yale)',
+    4: 'You can vie out list of events'
+}
+
+var tests =
 {
     1: 'The site should be using Bootstrap CSS',
     2: 'The site should have a header element',
@@ -62,9 +70,11 @@ function reportDetail (request, response) {
     var contextData = {
         title: 'Small-Sea Sprint reports site',
         report: rep,
-        functionality: functionality,
+        tests: tests,
+        functionality: functionality
     };
-    response.render('sprint'+ rep.id +'.html', contextData);
+    //response.render('sprint'+ rep.id +'.html', contextData);
+    response.render('sprintRep.html', contextData);
   }
   else
   {

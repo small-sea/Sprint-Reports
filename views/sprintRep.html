@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+  <h2>
+    This is Sprint report number {{report.id}}
+  </h2>
+  <!-- Burn down chart    -->
+  <h4><u> Burn-down Chart </u></h4>
+  <!-- Embbed from google sheets -->
+  <iframe
+    width="600" height="371" seamless frameborder="0" scrolling="no"
+    src={{report.burndown}}>
+  </iframe>
+  <!-- Functionality & Testing -->
+  <h4><u> Functionality </u></h4>
+  <p>
+      {% if report.functionality != 0 %}
+        Our site currently supports the following functions:
+        <ul>
+          {% for func in report.functionality %}
+              <li> {{functionality[func]}} </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+  </p>
+  <h4><u> Test Complaiance </u></h4>
+  <p>
+      Our site currently supports the following functions:
+      <ul class = 'done'>
+          {% for test in report.tests %}
+              <li> {{tests[test]}} </li>
+          {% endfor %}
+      </ul>
+      We're still working on these issues:
+      {% if report.todo != 0 %}
+        <ul class = 'todo'>
+          {% for todo in report.todo %}
+              <li> {{tests[todo]}} </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+  </p>
+  <!-- Scrum meeting held -->
+  <h4><u> Scrum meetings held </u></h4>
+  <pr>
+      {{report.meetings}}
+  </pr>
+  <!-- Points system      -->
+  <h4><u> Our points system </u></h4>
+  <pr>
+      {{report.pointsSys}}
+  </pr>  
+{% endblock %}
