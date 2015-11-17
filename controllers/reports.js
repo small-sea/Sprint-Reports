@@ -7,7 +7,7 @@ var functionality =
     1: 'You can create an event',
     2: 'Event creation has "memory" if field is valid',
     3: 'People can RSVP (only from Yale)',
-    4: 'You can vie out list of events'
+    4: 'You can view out list of events'
 }
 
 var tests =
