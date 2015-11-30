@@ -57,7 +57,8 @@ var tests =
     38: 'The new event creation page should display errors to the user when the location is empty',
     39: 'The new event creation page should display errors to the user when the title is too long',
     40: 'The new event creation page should display errors to the user when the title is empty',
-    41: 'The new event creation page should redirect the user to the event detail page if the form is valid'
+    41: 'The new event creation page should redirect the user to the event detail page if the form is valid',
+    42: 'The home page before all" hook for "should have a link to / in the footer'
 };
 
 function reportDetail (request, response) {

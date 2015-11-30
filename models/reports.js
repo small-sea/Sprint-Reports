@@ -53,10 +53,29 @@ var allReports = [
                     21,22,23,24,25,26,27,28,29,30,
                     31,32,33,34,35,36,37,38,39,40,
                     41],
-    todo: [],
+    todo: [13,14],
     meetings: ['During the last sprint we had a retrospect and a sprint planning meeting.<br>' + 
               'We remain ahead of schedule in our sprints. This week was focused on adding Google Analytics capability to analyze the traffic that will be sent to the site.<br>' + 
               'We also added API capablity and the donation link to our page. Our next step for Sprint 5 will be to conduct A/B testing to optimize our donation traffic'],
+    pointsSys: ['Our points sytem was based on the Fibonacci Sequence. Each developer had assigend points to their own story<br>' +
+                'because of our different development skills.']
+  },
+      {
+    id: 5,
+    date:   new Date(2015, 10, 30, 23, 59, 12 ),
+    link: 'reports/',
+    burndown: 'https://docs.google.com/spreadsheets/d/1qjzMJP5uw75XL0eKEKSjk6sxH3afQ7AykKQmh6No_Zg/pubchart?oid=643140696&format=interactive',
+    cumulativeburndown: 'https://docs.google.com/spreadsheets/d/1qjzMJP5uw75XL0eKEKSjk6sxH3afQ7AykKQmh6No_Zg/pubchart?oid=1257034279&format=interactive',
+    functionality: [1,2,3,4],
+    tests: [1,2,3,4,5,6,7,8,9,10,
+                    11,12,13,14,15,16,17,18,19,20,
+                    21,22,23,24,25,26,27,28,29,30,
+                    31,32,33,34,35,36,37,38,39,40,
+                    41],
+    todo: [42],
+    meetings: ['During the last sprint we had a retrospective and a sprint planning meeting.<br>' + 
+              'We remain ahead of schedule in our sprints. This week we reviewed our Google Analytics summary and added A/B testing to optimize our domain traffic.<br>' + 
+              'Our next steps for Sprint 6 will be to review the result of the A/B tests and assess which site format drives the most ticket sales. We will also add a link to the home page in the footer. Lastly, we will also be improving our site aesthetics by adding a CSS template to our current html'],
     pointsSys: ['Our points sytem was based on the Fibonacci Sequence. Each developer had assigend points to their own story<br>' +
                 'because of our different development skills.']
   }
