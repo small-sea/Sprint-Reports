@@ -29,13 +29,13 @@
       {% for report in reports %}
       <li>
           {% if report.link != 'reports/' %}
-              <a target="_blank" href = {{report.link}} >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
-          {% else %}
             {% if report.id < 7 %}
-              <a target="_blank" href = "/{{report.link}}{{report.id}}" >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
+              <a target="_blank" href = {{report.link}} >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
             {% else %}
-              <a target="_blank" href = "/{{report.link}}{{report.id}}" >Final sprint report</a> due {{report.date|prettyDate}}.
-            {% endif %}
+              <a target="_blank" href = {{report.link}} >Final sprint report</a> due {{report.date|prettyDate}}.
+            {% endif %}          
+          {% else %}
+            <a target="_blank" href = "/{{report.link}}{{report.id}}" >Sprint report number {{report.id}}</a> due {{report.date|prettyDate}}.
           {% endif %}
       </li>
       {% endfor %}
