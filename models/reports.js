@@ -97,7 +97,15 @@ var allReports = [
                'We have since corrected the issue and will monitor and analyize the results of our test before we submit our final report'],
     pointsSys: ['Our points sytem was based on the Fibonacci Sequence. Each developer had assigend points to their own story<br>' +
                 'because of our different development skills.']
-  }
+  },
+  {
+    id: 7,
+    date:   new Date(2015, 11, 11, 23, 59, 12 ),
+    link: 'https://docs.google.com/document/d/16l8hiq9gmKpGzPOmsHzKnGBahxT_tWXCB6HAM8YaV-0/edit?usp=sharing',
+    functionality: [],
+    tests: [],
+    todo: []
+  }  
 ];
 
 function getById (id) {
